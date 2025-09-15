@@ -1,0 +1,54 @@
+:root {
+  --color-petroleo: #1b3a4b;
+  --color-vino: #6a1e559c;
+  --color-blanco-humo: #f8f9fa;
+  --color-cobre: #b87333be;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--color-petroleo);
+  background-color: var(--color-blanco-humo);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-title {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+}
+
+.bg-form {
+  background-color: var(--color-petroleo);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bg-image {
+  background: linear-gradient(rgba(27, 58, 75, 0.7), rgba(27, 58, 75, 0.7)),
+    url("../img/home.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  color: var(--color-blanco-humo);
+}
+
+.lbl-auth::after {
+  content: " *";
+  color: red;
+}
+
+.btn-auth {
+  background-color: var(--color-cobre);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-other {
+  color: var(--color-cobre);
+}
+
+.btn-auth:hover {
+  border: 1px solid var(--color-blanco-humo);
+}
