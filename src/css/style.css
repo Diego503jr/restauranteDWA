@@ -1,0 +1,134 @@
+:root {
+    --color-petroleo: #1B3A4B;
+    --color-vino: #6a1e559c;
+    --color-blanco-humo: #F8F9FA;
+    --color-cobre: #b87333be;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--color-petroleo);
+    background-color: var(--color-blanco-humo);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.section-title {
+    color: var(--color-petroleo);
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-cobre);
+    margin: 10px auto 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--color-petroleo);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--color-blanco-humo) !important;
+}
+
+.nav-link {
+    color: var(--color-blanco-humo) !important;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: var(--color-cobre) !important;
+}
+
+.btn-vino {
+    background-color: var(--color-vino);
+    color: var(--color-blanco-humo);
+    border: 1px solid var(--color-vino);
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-vino:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-vino);
+    color: var(--color-vino);
+}
+
+/* Home */
+#home {
+    background: linear-gradient(rgba(27, 58, 75, 0.7), rgba(27, 58, 75, 0.7)), url('../img/home.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    color: var(--color-blanco-humo);
+}
+
+/* Carrusel */
+#foodCarousel .carousel-item img {
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-caption h5, .carousel-caption p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--color-cobre);
+}
+
+/* Sobre nostros */
+#about img {
+    border-radius: 10px;
+}
+
+/* Servicios */
+.service-card {
+    background-color: var(--color-blanco-humo);
+    border: 1px solid var(--color-vino);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--color-vino);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-petroleo);
+    color: var(--color-blanco-humo);
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--color-blanco-humo);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-cobre);
+}
+
+/* bckg */
+.bg-light-smoke {
+    background-color: var(--color-blanco-humo);
+}
