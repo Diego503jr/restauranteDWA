@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Menús - Alta Nota</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand brand-title" href="#">Alta Nota</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-vino" href="#">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="menu-title">NUESTRO MENÚ</h1>
+
+        <!-- Category Navigation -->
+        <div class="category-nav">
+            <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-entradas-tab" data-bs-toggle="pill" data-bs-target="#pills-entradas" type="button" role="tab">Entradas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-platos-tab" data-bs-toggle="pill" data-bs-target="#pills-platos" type="button" role="tab">Platos Fuertes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-postres-tab" data-bs-toggle="pill" data-bs-target="#pills-postres" type="button" role="tab">Postres</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-bebidas-tab" data-bs-toggle="pill" data-bs-target="#pills-bebidas" type="button" role="tab">Bebidas</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="tab-content" id="pills-tabContent">
+            
+            <!-- ENTRADAS -->
+            <div class="tab-pane fade show active" id="pills-entradas" role="tabpanel">
+                <h2 class="section-title">Entradas</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=400&h=200&fit=crop" alt="Bruschetta">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Bruschetta Clásica</h5>
+                                <p class="menu-item-description">Pan tostado con tomate fresco, albahaca y aceite de oliva</p>
+                                <div class="menu-item-price">$12.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=400&h=200&fit=crop" alt="Bruschetta">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Camarones al Ajillo</h5>
+                                <p class="menu-item-description">Camarones salteados en aceite de oliva con ajo y perejil</p>
+                                <div class="menu-item-price">$18.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=400&h=200&fit=crop" alt="Bruschetta">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Carpaccio de Res</h5>
+                                <p class="menu-item-description">Finas láminas de carne con rúcula y parmesano</p>
+                                <div class="menu-item-price">$22.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLATOS FUERTES -->
+            <div class="tab-pane fade" id="pills-platos" role="tabpanel">
+                <h2 class="section-title">Platos Fuertes</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=200&fit=crop" alt="Filete">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Filete de Res</h5>
+                                <p class="menu-item-description">Corte premium con puré de papas y vegetales asados</p>
+                                <div class="menu-item-price">$32.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=200&fit=crop" alt="Filete">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Salmón a la Plancha</h5>
+                                <p class="menu-item-description">Con risotto de espárragos y salsa de mantequilla</p>
+                                <div class="menu-item-price">$28.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=200&fit=crop" alt="Filete">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Pasta Alfredo</h5>
+                                <p class="menu-item-description">Fettuccine en salsa cremosa con pollo y champiñones</p>
+                                <div class="menu-item-price">$24.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POSTRES -->
+            <div class="tab-pane fade" id="pills-postres" role="tabpanel">
+                <h2 class="section-title">Postres</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1567306301408-9b74779a11af?w=400&h=200&fit=crop" alt="Tiramisú">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Tiramisú</h5>
+                                <p class="menu-item-description">Clásico postre italiano con café y mascarpone</p>
+                                <div class="menu-item-price">$8.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=200&fit=crop" alt="Cheesecake">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Cheesecake de Frutos Rojos</h5>
+                                <p class="menu-item-description">Cremoso cheesecake con salsa de fresas</p>
+                                <div class="menu-item-price">$9.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=200&fit=crop" alt="Flan">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Flan de Vainilla</h5>
+                                <p class="menu-item-description">Postre tradicional con caramelo casero</p>
+                                <div class="menu-item-price">$6.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BEBIDAS -->
+            <div class="tab-pane fade" id="pills-bebidas" role="tabpanel">
+                <h2 class="section-title">Bebidas</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=400&h=200&fit=crop" alt="Vino Tinto">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Vino Tinto Reserva</h5>
+                                <p class="menu-item-description">Copa de vino tinto de nuestra selección premium</p>
+                                <div class="menu-item-price">$12.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=200&fit=crop" alt="Cocktail">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Mojito Clásico</h5>
+                                <p class="menu-item-description">Ron, menta fresca, lima y agua con gas</p>
+                                <div class="menu-item-price">$10.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=200&fit=crop" alt="Jugo">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Limonada Natural</h5>
+                                <p class="menu-item-description">Refrescante limonada con menta y hielo</p>
+                                <div class="menu-item-price">$5.00</div>
+                                <button class="btn btn-order">Ordenar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
