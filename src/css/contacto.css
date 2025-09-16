@@ -1,0 +1,71 @@
+.reservaciones-form,
+.contacto-form {
+    max-width: 500px;       
+    min-height: 380px;     
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+
+.contacto-form textarea {
+    height: 120px;          
+    resize: none;          
+}
+
+
+.contacto-mapa iframe {
+    max-width: 100%;
+}
+
+
+footer a {
+    color: var(--color-blanco-humo);
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-cobre);
+}
+.contacto-info h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--color-petroleo);
+}
+
+.info-card {
+    background-color: var(--color-blanco-humo);
+    border: 1px solid var(--color-vino);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.info-card h5 {
+    color: var(--color-petroleo);
+    font-weight: 700;
+}
+
+.info-card p {
+    color: var(--color-petroleo);
+    margin-bottom: 0;
+}
+
+.info-card a {
+    color: var(--color-vino);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-card a:hover {
+    color: var(--color-cobre);
+}
+
+.contacto-icon {
+    font-size: 2.5rem;
+    color: var(--color-vino);
+}
