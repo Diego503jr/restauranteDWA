@@ -45,10 +45,25 @@ h6,
   transition: all 0.3s ease-in-out;
 }
 
+.btn-auth:hover {
+  transform: translateY(5px);
+}
+
 .btn-other {
   color: var(--color-cobre);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-other:hover {
+  transform: translateY(-2px);
 }
 
 .btn-auth:hover {
   border: 1px solid var(--color-blanco-humo);
+}
+
+.ipt-auth:focus {
+  box-shadow: none;
+  border-color: var(--color-cobre);
+  outline: none;
 }

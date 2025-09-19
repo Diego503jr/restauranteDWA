@@ -19,9 +19,27 @@
   <body>
     <main class="container-fluid">
       <div class="row">
+        <section class="col-md-6 d-flex align-items-center bg-image">
+          <div class="w-100 p-4 mx-auto text-center">
+            <h1>Alta Nota</h1>
+            <i style="font-size: small">Saborea la elegancia en cada bocado.</i>
+          </div>
+        </section>
         <section class="col-md-6 d-flex align-items-center bg-form">
-          <form id="loginForm" method="get" class="w-75 p-4 mx-auto">
-            <h4 class="text-white text-center">Iniciar Sesion</h4>
+          <form id="registerForm" method="post" class="w-75 p-4 mx-auto">
+            <h4 class="text-white text-center">Registrate</h4>
+            <div class="mb-3 col-sm-12">
+              <label
+                for="staticEmail"
+                class="col-form-label text-white lbl-auth"
+                >Nombre Completo</label
+              >
+              <input
+                type="text"
+                class="form-control bg-transparent border-1 ipt-auth text-white"
+                id="name"
+              />
+            </div>
             <div class="mb-3 col-sm-12">
               <label
                 for="staticEmail"
@@ -31,7 +49,7 @@
               <input
                 type="text"
                 class="form-control bg-transparent border-1 ipt-auth text-white"
-                id="logEmail"
+                id="email"
               />
             </div>
             <div class="mb-3 col-sm-12">
@@ -43,33 +61,38 @@
               <input
                 type="password"
                 class="form-control bg-transparent border-1 ipt-auth text-white"
-                id="logPassword"
+                id="password"
+              />
+            </div>
+            <div class="mb-3 col-sm-12">
+              <label
+                for="inputPassword"
+                class="col-form-label text-white lbl-auth"
+                >Confirmar Password</label
+              >
+              <input
+                type="password"
+                class="form-control bg-transparent border-1 ipt-auth text-white"
+                id="confirmPassword"
               />
             </div>
             <div class="mb-3 col-sm-12">
               <input
                 type="submit"
-                value="Iniciar Sesion"
+                value="Registrarse"
                 class="btn w-100 btn-auth text-white"
               />
             </div>
             <div class="col-sm-12 text-white text-center">
-              Si no tienes cuenta
-              <a href="./register.html" class="btn btn-other">Registrate</a>
+              Si tienes una cuenta
+              <a href="./index.html" class="btn btn-other">Inicia Sesion</a>
             </div>
           </form>
-        </section>
-
-        <section class="col-md-6 d-flex align-items-center bg-image">
-          <div class="w-100 p-4 mx-auto text-center">
-            <h1>Alta Nota</h1>
-            <i style="font-size: small">Saborea la elegancia en cada bocado.</i>
-          </div>
         </section>
       </div>
     </main>
 
-    <!-- Funcionalidad para el login -->
-    <script src="./src/js/login.js"></script>
+    <!-- Funcionalidad para el registro -->
+    <script src="./src/js/register.js"></script>
   </body>
 </html>

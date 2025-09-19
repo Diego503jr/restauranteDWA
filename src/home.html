@@ -1,156 +1,266 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alta Nota - Inicio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand brand-title" href="#">Alta Nota</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Galería</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Reservas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-vino" href="#">Iniciar Sesión</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand brand-title" href="#">Alta Nota</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menú</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-vino" href="./../index.html"
+                >Iniciar Sesión</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <main>
-        <section id="home" class="py-5 text-center d-flex align-items-center justify-content-center">
-            <div class="container">
-                <h1 class="display-3 brand-title animate__animated animate__fadeInDown">Alta Nota</h1>
-                <p class="lead text-white-50 mt-3 animate__animated animate__fadeInUp">Saborea la elegancia en cada bocado.</p>
-            </div>
-        </section>
+      <section
+        id="home"
+        class="py-5 text-center d-flex align-items-center justify-content-center"
+      >
+        <div class="container">
+          <h1
+            class="display-3 brand-title animate__animated animate__fadeInDown"
+          >
+            Alta Nota
+          </h1>
+          <p
+            class="lead text-white-50 mt-3 animate__animated animate__fadeInUp"
+          >
+            Saborea la elegancia en cada bocado.
+          </p>
+        </div>
+      </section>
 
-        <section id="carrusel" class="py-5 bg-light-smoke">
-            <div class="container">
-                <h2 class="text-center mb-5 section-title">Nuestros Platillos</h2>
-                <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/fileteCarr.jpg" class="d-block w-100" alt="Plato gourmet">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="text-white">Filete Mignon con Reducción de Vino</h5>
-                                <p class="text-white">Un clásico con un toque especial de la casa.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/sushiCarr.jpg" class="d-block w-100" alt="Sushi creativo">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="text-white">Rolls de Salmón y Aguacate</h5>
-                                <p class="text-white">Frescura y sabor en cada pieza.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/volcanCarr.jpg" class="d-block w-100" alt="Postre de chocolate">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="text-white">Volcán de Chocolate con Helado</h5>
-                                <p class="text-white">El final perfecto para una velada inolvidable.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-                </div>
+      <section id="carrusel" class="py-5 bg-light-smoke">
+        <div class="container">
+          <h2 class="text-center mb-5 section-title">Nuestros Platillos</h2>
+          <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#foodCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#foodCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#foodCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
             </div>
-        </section>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="img/fileteCarr.jpg"
+                  class="d-block w-100"
+                  alt="Plato gourmet"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white">
+                    Filete Mignon con Reducción de Vino
+                  </h5>
+                  <p class="text-white">
+                    Un clásico con un toque especial de la casa.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/sushiCarr.jpg"
+                  class="d-block w-100"
+                  alt="Sushi creativo"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white">Rolls de Salmón y Aguacate</h5>
+                  <p class="text-white">Frescura y sabor en cada pieza.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/volcanCarr.jpg"
+                  class="d-block w-100"
+                  alt="Postre de chocolate"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white">Volcán de Chocolate con Helado</h5>
+                  <p class="text-white">
+                    El final perfecto para una velada inolvidable.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#foodCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#foodCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </section>
 
-        <section id="about" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-4 section-title">Sobre Nosotros</h2>
-                <div class="row align-items-center">
-                    <div class="col-md-6 mb-4 mb-md-0 text-center">
-                        <img src="img/restoCarr.jpg" alt="Interior del restaurante" class="img-fluid rounded-3 shadow">
-                    </div>
-                    <div class="col-md-6">
-                        <p class="lead">Nuestra historia se forjó con una pasión inquebrantable por la alta cocina.</p>
-                        <p>En Alta Nota, creemos que la comida es más que un simple acto; es una experiencia. Desde 1995, hemos dedicado cada plato a la tradición, la innovación y la búsqueda de los ingredientes más frescos. Nuestra misión es transportarte a través de los sabores, creando momentos memorables en cada visita.</p>
-                    </div>
-                </div>
+      <section id="about" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4 section-title">Sobre Nosotros</h2>
+          <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0 text-center">
+              <img
+                src="img/restoCarr.jpg"
+                alt="Interior del restaurante"
+                class="img-fluid rounded-3 shadow"
+              />
             </div>
-        </section>
+            <div class="col-md-6">
+              <p class="lead">
+                Nuestra historia se forjó con una pasión inquebrantable por la
+                alta cocina.
+              </p>
+              <p>
+                En Alta Nota, creemos que la comida es más que un simple acto;
+                es una experiencia. Desde 1995, hemos dedicado cada plato a la
+                tradición, la innovación y la búsqueda de los ingredientes más
+                frescos. Nuestra misión es transportarte a través de los
+                sabores, creando momentos memorables en cada visita.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="services" class="py-5 bg-light-smoke">
-            <div class="container">
-                <h2 class="text-center mb-5 section-title">Nuestros Servicios Destacados</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card service-card h-100 shadow-sm border-0 text-center">
-                            <div class="card-body">
-                                <i class="bi bi-truck service-icon"></i>
-                                <h5 class="card-title mt-3">Comida Rápida & Delivery</h5>
-                                <p class="card-text">Disfruta de nuestros platillos en la comodidad de tu hogar. ¡Rápido y delicioso!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card service-card h-100 shadow-sm border-0 text-center">
-                            <div class="card-body">
-                                <i class="bi bi-calendar-check service-icon"></i>
-                                <h5 class="card-title mt-3">Reservaciones</h5>
-                                <p class="card-text">Asegura tu lugar para una velada especial con nuestro sistema de reservas en línea.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card service-card h-100 shadow-sm border-0 text-center">
-                            <div class="card-body">
-                                <i class="bi bi-star service-icon"></i>
-                                <h5 class="card-title mt-3">Eventos Privados</h5>
-                                <p class="card-text">Organiza tu evento con nosotros y déjanos crear un banquete inolvidable para ti y tus invitados.</p>
-                            </div>
-                        </div>
-                    </div>
+      <section id="services" class="py-5 bg-light-smoke">
+        <div class="container">
+          <h2 class="text-center mb-5 section-title">
+            Nuestros Servicios Destacados
+          </h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div
+                class="card service-card h-100 shadow-sm border-0 text-center"
+              >
+                <div class="card-body">
+                  <i class="bi bi-truck service-icon"></i>
+                  <h5 class="card-title mt-3">Comida Rápida & Delivery</h5>
+                  <p class="card-text">
+                    Disfruta de nuestros platillos en la comodidad de tu hogar.
+                    ¡Rápido y delicioso!
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
+            <div class="col-md-4">
+              <div
+                class="card service-card h-100 shadow-sm border-0 text-center"
+              >
+                <div class="card-body">
+                  <i class="bi bi-calendar-check service-icon"></i>
+                  <h5 class="card-title mt-3">Reservaciones</h5>
+                  <p class="card-text">
+                    Asegura tu lugar para una velada especial con nuestro
+                    sistema de reservas en línea.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="card service-card h-100 shadow-sm border-0 text-center"
+              >
+                <div class="card-body">
+                  <i class="bi bi-star service-icon"></i>
+                  <h5 class="card-title mt-3">Eventos Privados</h5>
+                  <p class="card-text">
+                    Organiza tu evento con nosotros y déjanos crear un banquete
+                    inolvidable para ti y tus invitados.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="text-center py-4 text-white">
-        <div class="container">
-            <p>RESTAURANTES ALTA NOTA, S.A. DE C.V.</p>
-        </div>
+      <div class="container">
+        <p>RESTAURANTES ALTA NOTA, S.A. DE C.V.</p>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/main.js"></script>
-</body>
+  </body>
 </html>
