@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Menús - Alta Nota</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand brand-title" href="#">Alta Nota</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-vino" href="#">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="menu-title">NUESTRO MENÚ</h1>
+
+        <div class="category-nav">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Contenedor para las pestañas (centradas) -->
+                <div class="flex-grow-1 d-flex justify-content-center">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-entradas-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-entradas" type="button" role="tab">Entradas</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-platos-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-platos" type="button" role="tab">Platos Fuertes</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-postres-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-postres" type="button" role="tab">Postres</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-bebidas-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-bebidas" type="button" role="tab">Bebidas</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Botón del carrito-->
+                <div class="ps-3">
+                    <button class="btn btn-cart position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        Carrito
+                        <span id="cartCount" class="position-absolute badge rounded-pill bg-danger"
+                            style="display: none;">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="tab-content" id="pills-tabContent">
+
+            <!-- ENTRADAS -->
+            <div class="tab-pane fade show active" id="pills-entradas" role="tabpanel">
+                <h2 class="section-title">Entradas</h2>
+                <div class="row">
+                    <!-- Bruschetta Clásica -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="Bruschetta">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Bruschetta Clásica</h5>
+                                <p class="menu-item-description">Pan tostado con tomate fresco, albahaca y aceite de
+                                    oliva</p>
+                                <div class="menu-item-price">$12.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Bruschetta Clásica"
+                                    data-price="12.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camarones al Ajillo -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://www.recetasnestlecam.com/sites/default/files/srh_recipes/a3edc0910e9c2e3c8a7670600542088a.jpg"
+                                alt="Camarones">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Camarones al Ajillo</h5>
+                                <p class="menu-item-description">Camarones salteados en aceite de oliva con ajo y
+                                    perejil</p>
+                                <div class="menu-item-price">$18.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Camarones al Ajillo"
+                                    data-price="18.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carpaccio de Res -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://vivirmejor.mx/vm-content/uploads/2023/08/Carpaccio-Res-2.jpg"
+                                alt="Carpaccio">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Carpaccio de Res</h5>
+                                <p class="menu-item-description">Finas láminas de carne con rúcula y parmesano</p>
+                                <div class="menu-item-price">$22.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Carpaccio de Res"
+                                    data-price="22.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sopa de Cebolla Gratinada -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://recetasdecocina.elmundo.es/wp-content/uploads/2024/10/sopa-de-cebolla-receta-1024x683.jpg"
+                                alt="Sopa de Cebolla">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Sopa de Cebolla Gratinada</h5>
+                                <p class="menu-item-description">Clásica sopa francesa con pan y queso gratinado</p>
+                                <div class="menu-item-price">$14.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Sopa de Cebolla Gratinada"
+                                    data-price="14.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Croquetas de Jamón -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://i.blogs.es/a3c185/croquetas/650_1200.jpg"
+                                alt="Croquetas">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Croquetas de Jamón Ibérico</h5>
+                                <p class="menu-item-description">Crujientes por fuera y cremosas por dentro</p>
+                                <div class="menu-item-price">$16.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Croquetas de Jamón Ibérico"
+                                    data-price="16.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ensalada Caprese -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://imag.bonviveur.com/resultado-final-de-la-receta-de-ensalada-caprese.jpg"
+                                alt="Ensalada Caprese">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Ensalada Caprese</h5>
+                                <p class="menu-item-description">Mozzarella fresca, tomate, albahaca y reducción
+                                    balsámica</p>
+                                <div class="menu-item-price">$13.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Ensalada Caprese"
+                                    data-price="13.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tartar de Atún -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://recetasdecocina.elmundo.es/wp-content/uploads/2020/05/tartar-de-atun.jpg"
+                                alt="Tartar de Atún">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Tartar de Atún</h5>
+                                <p class="menu-item-description">Dados de atún fresco con aguacate y sésamo</p>
+                                <div class="menu-item-price">$20.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Tartar de Atún"
+                                    data-price="20.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calamares a la Romana -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://recetasdecocina.elmundo.es/wp-content/uploads/2025/02/calamares-fritos.jpg"
+                                alt="Calamares">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Calamares a la Romana</h5>
+                                <p class="menu-item-description">Crujientes aros de calamar con salsa tártara</p>
+                                <div class="menu-item-price">$17.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Calamares a la Romana"
+                                    data-price="17.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PLATOS FUERTES -->
+            <div class="tab-pane fade" id="pills-platos" role="tabpanel">
+                <h2 class="section-title">Platos Fuertes</h2>
+                <div class="row">
+                    <!-- Filete de Res -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://cdn0.recetasgratis.net/es/posts/1/0/9/filete_a_la_tampiquena_20901_orig.jpg"
+                                alt="Filete">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Filete de Res</h5>
+                                <p class="menu-item-description">Corte premium con puré de papas y vegetales asados</p>
+                                <div class="menu-item-price">$32.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Filete de Res"
+                                    data-price="32.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Salmón a la Plancha -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp6yNxM60F79TSNb7oM6ahsBNF6SZRDbKa-A&s"
+                                alt="Salmón">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Salmón a la Plancha</h5>
+                                <p class="menu-item-description">Con risotto de espárragos y salsa de mantequilla</p>
+                                <div class="menu-item-price">$28.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Salmón a la Plancha"
+                                    data-price="28.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pasta Alfredo -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://mojo.generalmills.com/api/public/content/8GresqM3pUK_fXrmtlyKjg_gmi_hi_res_jpeg.jpeg?v=df1663f8&t=16e3ce250f244648bef28c5949fb99ff"
+                                alt="Pasta Alfredo">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Pasta Alfredo</h5>
+                                <p class="menu-item-description">Fettuccine en salsa cremosa con pollo y champiñones</p>
+                                <div class="menu-item-price">$24.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Pasta Alfredo"
+                                    data-price="24.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pollo a la Parrilla -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://www.paulinacocina.net/wp-content/uploads/2021/11/pollo-asado.jpg"
+                                alt="Pollo">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Pollo a la Parrilla</h5>
+                                <p class="menu-item-description">Marinado con hierbas, servido con ensalada fresca y
+                                    arroz</p>
+                                <div class="menu-item-price">$22.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Pollo a la Parrilla"
+                                    data-price="22.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lasagna Bolognesa -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://www.gourmet.cl/wp-content/uploads/2016/09/iStock-505754880-1.jpg"
+                                alt="Lasagna">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Lasagna Bolognesa</h5>
+                                <p class="menu-item-description">Capas de pasta con carne, salsa de tomate y queso
+                                    gratinado</p>
+                                <div class="menu-item-price">$20.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Lasagna Bolognesa"
+                                    data-price="20.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paella Mixta -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdJ0aelXKRWTr2s3FX5KNVdJqwf2ZY0ljfGg&s"
+                                alt="Paella">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Paella Mixta</h5>
+                                <p class="menu-item-description">Arroz con mariscos, pollo y vegetales al estilo español
+                                </p>
+                                <div class="menu-item-price">$30.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Paella Mixta"
+                                    data-price="30.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Costillas BBQ -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx_aFfz8J2k8oon1ptS9C3kHEt13namBMtpQ&s"
+                                alt="Costillas">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Costillas BBQ</h5>
+                                <p class="menu-item-description">Costillas de cerdo glaseadas con salsa barbacoa,
+                                    servidas con papas rústicas</p>
+                                <div class="menu-item-price">$26.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Costillas BBQ"
+                                    data-price="26.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Risotto de Mariscos -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://cecotec.es/recetas/wp-content/uploads/2024/01/Mambo_Risotto_de_marisco_RRSS-1-1.jpg"
+                                alt="Risotto">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Risotto de Mariscos</h5>
+                                <p class="menu-item-description">Arroz cremoso con camarones, calamares y mejillones</p>
+                                <div class="menu-item-price">$29.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Risotto de Mariscos"
+                                    data-price="29.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POSTRES -->
+            <div class="tab-pane fade" id="pills-postres" role="tabpanel">
+                <h2 class="section-title">Postres</h2>
+                <div class="row">
+                    <!-- Tiramisú -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://www.paulinacocina.net/wp-content/uploads/2020/01/receta-de-tiramisu-facil-y-economico-1740483918.jpg"
+                                alt="Tiramisú">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Tiramisú</h5>
+                                <p class="menu-item-description">Clásico postre italiano con café y mascarpone</p>
+                                <div class="menu-item-price">$8.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Tiramisú" data-price="8.00">Agregar
+                                    al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cheesecake -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/7f9ebeaceea909a80306da27f0495c59.jpg"
+                                alt="Cheesecake">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Cheesecake de Frutos Rojos</h5>
+                                <p class="menu-item-description">Cremoso cheesecake con salsa de fresas</p>
+                                <div class="menu-item-price">$9.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Cheesecake de Frutos Rojos"
+                                    data-price="9.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flan -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://cdn-ilddihb.nitrocdn.com/MgqZCGPEMHvMRLsisMUCAIMWvgGMxqaj/assets/images/optimized/rev-51c0748/www.goya.com/wp-content/uploads/2023/10/flan.jpg"
+                                alt="Flan">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Flan de Vainilla</h5>
+                                <p class="menu-item-description">Postre tradicional con caramelo casero</p>
+                                <div class="menu-item-price">$6.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Flan de Vainilla"
+                                    data-price="6.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brownie con Helado -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://www.shutterstock.com/image-photo/chocolate-brownie-scoop-vanilla-ice-600nw-2516804119.jpg"
+                                alt="Brownie">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Brownie con Helado</h5>
+                                <p class="menu-item-description">Brownie de chocolate caliente con bola de helado de
+                                    vainilla</p>
+                                <div class="menu-item-price">$7.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Brownie con Helado"
+                                    data-price="7.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Crème Brûlée -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://media.elgourmet.com/recetas/cover/creme_ym8t9WVSMv2RrYHQwxgEZlTphPjJz3.png"
+                                alt="Creme Brulee">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Crème Brûlée</h5>
+                                <p class="menu-item-description">Suave crema de vainilla con cobertura caramelizada</p>
+                                <div class="menu-item-price">$10.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Crème Brûlée"
+                                    data-price="10.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Helado Artesanal -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://static.excelenciasgourmet.com/cdn/ff/CW0Rdk3DdpjBTJLGivA3NcaJdOnbLKlZGyEfTXc74BQ/1721683340/public/2019-09/helado-artesanal_0.jpg"
+                                alt="Helado">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Helado Artesanal</h5>
+                                <p class="menu-item-description">Tres sabores a elección: chocolate, vainilla y fresa
+                                </p>
+                                <div class="menu-item-price">$5.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Helado Artesanal"
+                                    data-price="5.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mousse de Chocolate -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://recetasdecocina.elmundo.es/wp-content/uploads/2024/11/Mousse-de-chocolate-1024x683.jpg"
+                                alt="Mousse de Chocolate">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Mousse de Chocolate</h5>
+                                <p class="menu-item-description">Espuma ligera de chocolate con virutas de cacao</p>
+                                <div class="menu-item-price">$8.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Mousse de Chocolate"
+                                    data-price="8.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panna Cotta -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://i.blogs.es/bb86a3/panna_cotta/840_560.jpg"
+                                alt="Panna Cotta">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Panna Cotta</h5>
+                                <p class="menu-item-description">Delicado postre italiano con coulis de frutos rojos</p>
+                                <div class="menu-item-price">$9.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Panna Cotta"
+                                    data-price="9.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BEBIDAS -->
+            <div class="tab-pane fade" id="pills-bebidas" role="tabpanel">
+                <h2 class="section-title">Bebidas</h2>
+                <div class="row">
+                    <!-- Vino Tinto -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://descorcha.com/mx/img/ybc_blog/post/1738074785758.jpg"
+                                alt="Vino Tinto">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Vino Tinto Reserva</h5>
+                                <p class="menu-item-description">Copa de vino tinto de nuestra selección premium</p>
+                                <div class="menu-item-price">$12.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Vino Tinto Reserva"
+                                    data-price="12.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mojito -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://cdn.recetasderechupete.com/wp-content/uploads/2020/02/Mojito-bar.jpg"
+                                alt="Mojito">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Mojito Clásico</h5>
+                                <p class="menu-item-description">Ron, menta fresca, lima y agua con gas</p>
+                                <div class="menu-item-price">$10.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Mojito Clásico"
+                                    data-price="10.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Limonada -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://comedera.com/wp-content/uploads/sites/9/2022/04/Limonada-shutterstock_379385302.jpg?w=4096"
+                                alt="Limonada">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Limonada Natural</h5>
+                                <p class="menu-item-description">Refrescante limonada con menta y hielo</p>
+                                <div class="menu-item-price">$5.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Limonada Natural"
+                                    data-price="5.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cerveza Artesanal -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbpPWmElbHraEKJkT84nJXA3tPMYN5DDGlHQ&s"
+                                alt="Cerveza">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Cerveza Artesanal</h5>
+                                <p class="menu-item-description">Selección de cerveza local de la casa</p>
+                                <div class="menu-item-price">$7.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Cerveza Artesanal"
+                                    data-price="7.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Café Espresso -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://media.scoolinary.app/blog/images/2022/10/Cafe%CC%81-y-cocktails_IVI8151.jpg"
+                                alt="Espresso">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Café Espresso</h5>
+                                <p class="menu-item-description">Intenso café espresso recién preparado</p>
+                                <div class="menu-item-price">$4.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Café Espresso"
+                                    data-price="4.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jugo de Naranja -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://image.tuasaude.com/media/article/go/jh/suco-de-laranja_67324.jpg?width=686&height=487"
+                                alt="Jugo de Naranja">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Jugo de Naranja Natural</h5>
+                                <p class="menu-item-description">Exprimido al momento, 100% natural</p>
+                                <div class="menu-item-price">$6.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Jugo de Naranja Natural"
+                                    data-price="6.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gin Tonic -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj3AS2RfPA8MtTk0EEnMFkeLMTjtLN2X-N-Q&s"
+                                alt="Gin Tonic">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Gin Tonic</h5>
+                                <p class="menu-item-description">Gin premium con agua tónica y rodajas de limón</p>
+                                <div class="menu-item-price">$11.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Gin Tonic"
+                                    data-price="11.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agua Mineral -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card menu-item-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLnOkDSHPG00B2QNM07ydASTYHSw5JEduM8A&s"
+                                alt="Agua Mineral">
+                            <div class="card-body">
+                                <h5 class="menu-item-title">Agua Mineral</h5>
+                                <p class="menu-item-description">Botella de agua mineral con o sin gas</p>
+                                <div class="menu-item-price">$3.00</div>
+                                <button class="btn btn-order add-to-cart" data-name="Agua Mineral"
+                                    data-price="3.00">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartMessage" style="display: none;" class="alert alert-success">✅ Pago realizado con éxito
+                    </div>
+                    <div id="cartItems" class="list-group"></div>
+                    <div id="cartInvoice" style="display: none;">
+                        <h5>Factura</h5>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody id="invoiceItems"></tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <th id="invoiceTotal">$0.00</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-between mt-3" id="cartTotalContainer">
+                        <h5>Total:</h5>
+                        <h5 id="cartTotal">$0.00</h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="clearCart">Vaciar Carrito</button>
+                    <button type="button" class="btn btn-primary" id="proceedPayment">Proceder al Pago</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Toast Container (puede ir al final del body) -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Notificación</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastBody">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

@@ -164,7 +164,7 @@ footer {
 
 
 .category-nav {
-    background-color:#1B3A4B;
+    background-color: #1B3A4B;
     border-radius: 15px;
     padding: 10px;
     margin-bottom: 40px;
@@ -173,7 +173,7 @@ footer {
 
 
 .category-nav .nav-pills .nav-link:hover {
-    background-color:  #b87333be;
+    background-color: #b87333be;
     color: white !important;
 }
 
@@ -230,4 +230,31 @@ footer {
     background-color: var(--color-cobre);
     border-color: var(--color-cobre);
     color: var(--color-blanco-humo);
+}
+
+.category-nav .cart-button-container {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.category-nav .btn-cart {
+    background-color: var(--color-vino);
+    color: var(--color-blanco-humo);
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.category-nav .btn-cart:hover {
+    background-color: var(--color-cobre);
+}
+
+.category-nav .btn-cart .badge {
+    top: -10px;
+    right: -10px;
 }
