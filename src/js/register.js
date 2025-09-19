@@ -1,3 +1,7 @@
+const toastEl = document.getElementById("registerToast");
+const toastBody = document.getElementById("toastBody");
+const toast = new bootstrap.Toast(toastEl);
+
 //   Funcion para validar email
 function emailValidation(email) {
   const regx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -39,30 +43,48 @@ document
 
     //   Validamos que no esten vacios
     if (!name || !email || !password || !confirmPassword) {
-      alert("Por favor, completa todos los campos ❌");
+      toastEl.className =
+        "toast align-items-center text-dark bg-warning border-0";
+      toastBody.textContent =
+        "⚠️ Atención, Por favor completa todos los campos";
+      toast.show();
       return;
     }
 
     if (!emailValidation(email)) {
-      alert("Email invalido ❌");
+      toastEl.className =
+        "toast align-items-center text-dark bg-warning border-0";
+      toastBody.textContent = "⚠️ Atención, Email invalido";
+      toast.show();
       return;
     }
 
     if (!passValidation(password)) {
-      alert(
-        "La contraseña debe contener una minuscula, mayuscula, un numero y minimo 8 caracteres ❌"
-      );
+      toastEl.className =
+        "toast align-items-center text-dark bg-warning border-0";
+      toastBody.textContent =
+        "⚠️ Atención, La contraseña debe contener una minuscula, mayuscula, un numero y minimo 8 caracteres";
+      toast.show();
       return;
     }
 
     if (!passTopass(password, confirmPassword)) {
-      alert("Contraseñas no concuerdan ❌");
+      toastEl.className =
+        "toast align-items-center text-dark bg-warning border-0";
+      toastBody.textContent = "⚠️ Atención, Contraseñas no concuerdan";
+      toast.show();
       return;
     }
 
     const user = { name, email, password };
     localStorage.setItem("user", JSON.stringify(user));
 
-    alert("Registro exitoso ✅");
-    window.location.href = "./index.html"; // redirigir al login
+    toastEl.className =
+      "toast align-items-center text-white bg-success border-0";
+    toastBody.textContent = "✅ Éxito, Registro";
+    toast.show();
+
+    setTimeout(() => {
+      window.location.href = "./index.html"; // redirigir al login
+    }, 3000);
   });
