@@ -35,12 +35,6 @@ document
     const password = passwordIn.value.trim();
     const confirmPassword = confirmPasswordIn.value.trim();
 
-    //   Limpiamos los campos
-    nameIn.value = "";
-    emailIn.value = "";
-    passwordIn.value = "";
-    confirmPasswordIn.value = "";
-
     //   Validamos que no esten vacios
     if (!name || !email || !password || !confirmPassword) {
       toastEl.className =
@@ -86,5 +80,11 @@ document
 
     setTimeout(() => {
       window.location.href = "./index.html"; // redirigir al login
+
+      //   Limpiamos los campos
+      nameIn.value = "";
+      emailIn.value = "";
+      passwordIn.value = "";
+      confirmPasswordIn.value = "";
     }, 3000);
   });

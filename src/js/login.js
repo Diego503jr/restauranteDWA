@@ -12,10 +12,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const logEmail = logEmailIn.value.trim();
   const logPassword = logPasswordIn.value.trim();
 
-  //   Limpiamos los campos
-  logEmailIn.value = "";
-  logPasswordIn.value = "";
-
   //   Validamos que no esten vacios
   if (!logEmail || !logPassword) {
     toastEl.className =
@@ -47,6 +43,10 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     setTimeout(() => {
       window.location.href = "./src/home.html";
+
+      //   Limpiamos los campos
+      logEmailIn.value = "";
+      logPasswordIn.value = "";
     }, 3000);
   } else {
     toastEl.className =

@@ -55,7 +55,10 @@ h6,
 }
 
 .btn-other:hover {
-  transform: translateY(-2px);
+  transform: translate(-14px, -2px);
+  color: var(--color-cobre);
+  /* transform: translateY(-2px);
+  transform: translateX(-5px); */
 }
 
 .btn-auth:hover {
@@ -63,7 +66,6 @@ h6,
 }
 
 .ipt-auth:focus {
-  box-shadow: none;
+  box-shadow: var(--color-cobre);
   border-color: var(--color-cobre);
-  outline: none;
 }
