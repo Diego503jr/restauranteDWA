@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta Nota - Galeria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/galeria.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main class="container galery">
+        <h2 class="text-center mb-5">Galería de Alta Nota</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm hover-shadow">
+                    <img src="../src/img/fileteCarr.jpg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Filete Mignon</h5>
+                        <p class="card-text">Corte fino proveniente de la punta del solomillo, la parte más tierna y
+                            magra de la res. Suave, jugoso y lleno de sabor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../src/img/MarTierra.png" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mar y Tierra</h5>
+                        <p class="card-text">Una deliciosa combinación de jugoso filete de res acompañado con camarones
+                            a la plancha, fusionando lo mejor de la carne y el mar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../src/img/NewYorkSteak.jpg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">New York Steak</h5>
+                        <p class="card-text">Clásico corte americano de res, tierno y lleno de jugo, ideal para los
+                            amantes de un buen asado.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../src/img/SalmonParilla.png" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Salmon a la Parrilla</h5>
+                        <p class="card-text">Fresco salmón cocinado lentamente a las brasas, con piel crujiente y carne
+                            suave, perfecto para una opción ligera y saludable..</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../src/img/PastaAlfredo.jpg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pasta Alfredo</h5>
+                        <p class="card-text">Pasta bañada en una cremosa salsa Alfredo elaborada con mantequilla, crema
+                            y queso parmesano, un clásico italiano irresistible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../src/img/HamburgesaF5.jpg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Burger F15</h5>
+                        <p class="card-text">Hamburguesa de res a la parrilla con queso derretido, vegetales frescos y
+                            papas fritas, una explosión de sabor en cada bocado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/js/galery.js"></script>
+    <script src="../src/js/main.js"></script>
+
+
+
+    <!-- Modal Bootstrap para mostrar imagen -->
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <img id="modalImg" src="" class="img-fluid rounded" alt="Imagen ampliada">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

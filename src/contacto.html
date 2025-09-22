@@ -15,40 +15,7 @@
 </head>
 
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand brand-title" href="#">Alta Nota</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Galería</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Reservas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-vino" href="#">Iniciar Sesión</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <div id="header"></div>
     <!-- Sección Contacto -->
     <main class="pt-5 mt-5">
         <section class="contacto-section py-5 bg-light-smoke">
@@ -59,27 +26,27 @@
 
                     <!-- Formulario Reservaciones -->
                     <div class="col-md-6">
-                        <form class="reservaciones-form p-4 bg-white rounded shadow-sm border mx-auto">
+                        <form id="reservaForm" class="reservaciones-form p-4 bg-white rounded shadow-sm border mx-auto">
                             <h3 class="mb-3">Reservar Mesa</h3>
-                            <input type="text" name="nombre" placeholder="Nombre completo" class="form-control mb-3"
-                                required>
-                            <input type="date" name="fecha" class="form-control mb-3" required>
-                            <input type="time" name="hora" class="form-control mb-3" required>
-                            <input type="number" name="personas" placeholder="Número de personas" min="1"
+                            <input type="text" id="nombreReserva" name="nombre" placeholder="Nombre completo"
                                 class="form-control mb-3" required>
+                            <input type="date" id="fechaReserva" name="fecha" class="form-control mb-3" required>
+                            <input type="time" id="horaReserva" name="hora" class="form-control mb-3" required>
+                            <input type="number" id="personasReserva" name="personas" placeholder="Número de personas"
+                                min="1" class="form-control mb-3" required>
                             <button type="submit" class="btn btn-vino w-100">Reservar</button>
                         </form>
                     </div>
 
                     <!-- Formulario Contacto -->
                     <div class="col-md-6">
-                        <form class="contacto-form p-4 bg-white rounded shadow-sm border mx-auto">
+                        <form id="contactForm" class="contacto-form p-4 bg-white rounded shadow-sm border mx-auto">
                             <h3 class="mb-3">Contacto</h3>
-                            <input type="text" name="nombre" placeholder="Nombre completo" class="form-control mb-3"
-                                required>
-                            <input type="email" name="correo" placeholder="Correo electrónico" class="form-control mb-3"
-                                required>
-                            <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="5"
+                            <input type="text" id="nombreContacto" name="nombre" placeholder="Nombre completo"
+                                class="form-control mb-3" required>
+                            <input type="email" id="emailContacto" name="correo" placeholder="Correo electrónico"
+                                class="form-control mb-3" required>
+                            <textarea name="mensaje" id="mensajeContacto" placeholder="Escribe tu mensaje..." rows="5"
                                 class="form-control mb-3" required></textarea>
                             <button type="submit" class="btn btn-vino w-100">Enviar</button>
                         </form>
@@ -131,14 +98,22 @@
         </section>
     </main>
 
-    <!-- Footer -->
-   <footer class="text-center py-4 text-white">
-        <div class="container">
-            <p>RESTAURANTES ALTA NOTA, S.A. DE C.V.</p>
+    <!-- Toast container -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="messageContent" class="toast align-items-center text-white bg-danger border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="messageBody"></div>
+                <button type="button" class="btn-close btn-close me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Cerrar"></button>
+            </div>
         </div>
-    </footer>
+    </div>
+
+    <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/js/contacto.js"></script>
 </body>
 
 </html>
