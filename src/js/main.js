@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   // ---- Cargar Header y Footer ----
-  // Función para cargar contenido desde un archivo HTML
+  // Función para cargar contenido desde el archivo HTML
   function loadHTML(elementId, filePath) {
     fetch(filePath)
       .then(response => {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(data => {
         document.getElementById(elementId).innerHTML = data;
 
-        // Extra: resaltar el link activo en el header solo si es el header
+        //resalta el link activo en el header solo si es el header
         if (elementId === "header") {
           const currentPath = window.location.pathname.split('/').pop();
           const navLinks = document.querySelectorAll('#navbarNav .nav-link');
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Cargar el header y footer con las rutas correctas para tu proyecto
+  // Cargar el header y footer con las rutas correctas
   loadHTML("header", "header.html");
   loadHTML("footer", "footer.html");
 });
