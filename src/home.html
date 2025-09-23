@@ -7,6 +7,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,51 +18,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="./js/privateRoutes.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand brand-title" href="#">Alta Nota</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Menú</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Galería</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reservas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link btn btn-vino" onclick="logout()">
-                Cerrar Sesion
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="header"></div>
 
     <main>
       <section
@@ -255,35 +217,166 @@
       </section>
     </main>
 
-    <footer class="text-center py-4 text-white">
-      <div class="container">
-        <p>RESTAURANTES ALTA NOTA, S.A. DE C.V.</p>
-      </div>
-    </footer>
+    <!--Testimoniales-->
+    <section style="color: #000; background-color: #f3f2f2">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-xl-8 text-center">
+            <h3 class="fw-bold mb-4">Testimoniales</h3>
+            <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+              En Nota Alta, cada detalle está pensado para crear experiencias
+              inolvidables. Nuestros clientes son el reflejo de nuestra pasión
+              por la excelencia gastronómica y el servicio impecable. Estas son
+              algunas de sus palabras...
+            </p>
+          </div>
+        </div>
 
-    <!-- Toast container -->
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-      <div
-        id="logoutToast"
-        class="toast align-items-center text-white bg-danger border-0"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div class="d-flex">
-          <div class="toast-body" id="toastBody"></div>
-          <button
-            type="button"
-            class="btn-close btn-close-white me-2 m-auto"
-            data-bs-dismiss="toast"
-            aria-label="Cerrar"
-          ></button>
+        <div class="row text-center">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="card h-100">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img
+                    src="../src/img/Tm-1.jpg"
+                    class="rounded-circle shadow-1-strong"
+                    width="100"
+                    height="100"
+                  />
+                </div>
+                <h5 class="font-weight-bold">Teresa Gutierrez</h5>
+                <h6 class="font-weight-bold my-3">Empresaria</h6>
+
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i>"En Nota Alta cada
+                  visita es una experiencia única. La atención es impecable y
+                  los cortes de carne simplemente perfectos. Definitivamente el
+                  mejor restaurante de la ciudad."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="card h-100">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img
+                    src="../src/img/Tm-2.jpg"
+                    class="rounded-circle shadow-1-strong"
+                    width="100"
+                    height="100"
+                  />
+                </div>
+                <h5 class="font-weight-bold">Maggie López</h5>
+                <h6 class="font-weight-bold my-3">Fotógrafa</h6>
+
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i>"Me sorprendió la
+                  armonía de sabores en cada platillo. El ambiente es elegante
+                  pero cálido, ideal para disfrutar en pareja o con amigos."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-0">
+            <div class="card h-100">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img
+                    src="../src/img/TM.3.jpg"
+                    class="rounded-circle shadow-1-strong"
+                    width="100"
+                    height="100"
+                  />
+                </div>
+                <h5 class="font-weight-bold">Alejandro Ramírez</h5>
+                <h6 class="font-weight-bold my-3">Abogado</h6>
+
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i>"La combinación de
+                  mariscos y carnes en el menú es espectacular. Cada detalle
+                  está cuidado al máximo, desde la presentación hasta el
+                  servicio."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-0 mt-3">
+            <div class="card h-100">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img
+                    src="../src/img/TM-4.jpg"
+                    class="rounded-circle shadow-1-strong"
+                    width="100"
+                    height="100"
+                  />
+                </div>
+                <h5 class="font-weight-bold">Claudia Mendez</h5>
+                <h6 class="font-weight-bold my-3">Arquitecta</h6>
+
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i>"El Filete Mignon fue el
+                  mejor que he probado en mi vida. La calidad de los
+                  ingredientes y la preparación superan cualquier expectativa."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-0 mt-3">
+            <div class="card h-100">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img
+                    src="../src/img/TM-5.jpg"
+                    class="rounded-circle shadow-1-strong"
+                    width="100"
+                    height="100"
+                  />
+                </div>
+                <h5 class="font-weight-bold">Daniel Herrera</h5>
+                <h6 class="font-weight-bold my-3">Ejecutivo de Negocios</h6>
+
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i>"Nota Alta es el lugar
+                  perfecto para cenas de trabajo. Elegancia, discreción y
+                  gastronomía de primer nivel."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-0 mt-3">
+            <div class="card h-100">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img
+                    src="../src/img/TM-6.jpg"
+                    class="rounded-circle shadow-1-strong"
+                    width="100"
+                    height="100"
+                  />
+                </div>
+                <h5 class="font-weight-bold">Isabella Torres</h5>
+                <h6 class="font-weight-bold my-3">Chef Aficionada</h6>
+
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i>"La Pasta Alfredo y el
+                  Salmón a la Parrilla me dejaron sin palabras. Se nota la
+                  pasión por la cocina en cada bocado."
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="src/js/main.js"></script>
-    <script src="./js/logout.js"></script>
+    <script src="/src/js/main.js"></script>
   </body>
 </html>

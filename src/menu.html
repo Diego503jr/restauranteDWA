@@ -5,43 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros Menús - Alta Nota</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand brand-title" href="#">Alta Nota</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="home.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Galería</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Reservas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-vino" href="#">Iniciar Sesión</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header"></div>
+
 
     <div class="container">
         <h1 class="menu-title">NUESTRO MENÚ</h1>
@@ -153,8 +129,7 @@
                     <!-- Croquetas de Jamón -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card menu-item-card">
-                            <img src="https://i.blogs.es/a3c185/croquetas/650_1200.jpg"
-                                alt="Croquetas">
+                            <img src="https://i.blogs.es/a3c185/croquetas/650_1200.jpg" alt="Croquetas">
                             <div class="card-body">
                                 <h5 class="menu-item-title">Croquetas de Jamón Ibérico</h5>
                                 <p class="menu-item-description">Crujientes por fuera y cremosas por dentro</p>
@@ -458,8 +433,7 @@
                     <!-- Panna Cotta -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card menu-item-card">
-                            <img src="https://i.blogs.es/bb86a3/panna_cotta/840_560.jpg"
-                                alt="Panna Cotta">
+                            <img src="https://i.blogs.es/bb86a3/panna_cotta/840_560.jpg" alt="Panna Cotta">
                             <div class="card-body">
                                 <h5 class="menu-item-title">Panna Cotta</h5>
                                 <p class="menu-item-description">Delicado postre italiano con coulis de frutos rojos</p>
@@ -479,8 +453,7 @@
                     <!-- Vino Tinto -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card menu-item-card">
-                            <img src="https://descorcha.com/mx/img/ybc_blog/post/1738074785758.jpg"
-                                alt="Vino Tinto">
+                            <img src="https://descorcha.com/mx/img/ybc_blog/post/1738074785758.jpg" alt="Vino Tinto">
                             <div class="card-body">
                                 <h5 class="menu-item-title">Vino Tinto Reserva</h5>
                                 <p class="menu-item-description">Copa de vino tinto de nuestra selección premium</p>
@@ -647,7 +620,7 @@
 
 
 
-    <!-- Toast Container (puede ir al final del body) -->
+    <!-- Toast Container-->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -658,8 +631,13 @@
             </div>
         </div>
     </div>
+
+    <div id="footer"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="js/menu.js"></script>
+    <script src="../src/js/main.js"></script>
+
 </body>
 
 </html>
