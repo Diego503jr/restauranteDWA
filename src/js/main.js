@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
               localStorage.setItem("isLoggedIn", "false");
 
               setTimeout(() => {
-                window.location.href = "../../index.html";
-              }, 3000);
+                window.location.href = "./../../index.html";
+              }, 2000);
             }
           });
         }

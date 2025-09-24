@@ -1,120 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alta Nota - Contacto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contacto.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
 
-<body>
+  <body>
     <div id="header"></div>
     <!-- Sección Contacto -->
     <main class="pt-5 mt-5">
-        <section class="contacto-section py-5 bg-light-smoke">
-            <div class="container">
-                <h2 class="text-center mb-5 section-title">Reservaciones y Contacto</h2>
+      <section class="contacto-section py-5 bg-light-smoke">
+        <div class="container">
+          <h2 class="text-center mb-5 section-title">
+            Reservaciones y Contacto
+          </h2>
 
-                <div class="row justify-content-center g-4">
-
-                    <!-- Formulario Reservaciones -->
-                    <div class="col-md-6">
-                        <form id="reservaForm" class="reservaciones-form p-4 bg-white rounded shadow-sm border mx-auto">
-                            <h3 class="mb-3">Reservar Mesa</h3>
-                            <input type="text" id="nombreReserva" name="nombre" placeholder="Nombre completo"
-                                class="form-control mb-3" required>
-                            <input type="date" id="fechaReserva" name="fecha" class="form-control mb-3" required>
-                            <input type="time" id="horaReserva" name="hora" class="form-control mb-3" required>
-                            <input type="number" id="personasReserva" name="personas" placeholder="Número de personas"
-                                min="1" class="form-control mb-3" required>
-                            <button type="submit" class="btn btn-vino w-100">Reservar</button>
-                        </form>
-                    </div>
-
-                    <!-- Formulario Contacto -->
-                    <div class="col-md-6">
-                        <form id="contactForm" class="contacto-form p-4 bg-white rounded shadow-sm border mx-auto">
-                            <h3 class="mb-3">Contacto</h3>
-                            <input type="text" id="nombreContacto" name="nombre" placeholder="Nombre completo"
-                                class="form-control mb-3" required>
-                            <input type="email" id="emailContacto" name="correo" placeholder="Correo electrónico"
-                                class="form-control mb-3" required>
-                            <textarea name="mensaje" id="mensajeContacto" placeholder="Escribe tu mensaje..." rows="5"
-                                class="form-control mb-3" required></textarea>
-                            <button type="submit" class="btn btn-vino w-100">Enviar</button>
-                        </form>
-                    </div>
-
-                </div>
-
-                <!-- Mapa -->
-                <div class="contacto-mapa mt-5">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.732866506767!2d-89.28140622413574!3d13.67400079908853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f632e511f372dd3%3A0x3fe0c1447718b059!2sITCA%20-%20FEPADE!5e0!3m2!1ses-419!2ssv!4v1757911606201!5m2!1ses-419!2ssv"
-                        width="100%" height="400" style="border:0; border-radius:10px;" allowfullscreen=""
-                        loading="lazy">
-                    </iframe>
-                </div>
-
-                <!-- Información de contacto -->
-                <div class="contacto-info text-center mt-5">
-                    <h3 class="mb-4">Contáctanos</h3>
-                    <div class="row justify-content-center g-4">
-
-                        <div class="col-md-4">
-                            <div class="info-card p-4 rounded shadow-sm border h-100">
-                                <i class="bi bi-telephone-fill contacto-icon mb-3"></i>
-                                <h5>Teléfono</h5>
-                                <p><a href="tel:+50312345678">+503 1234 5678</a></p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="info-card p-4 rounded shadow-sm border h-100">
-                                <i class="bi bi-envelope-fill contacto-icon mb-3"></i>
-                                <h5>Correo</h5>
-                                <p><a href="mailto:info@restaurante.com">info@restaurante.com</a></p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="info-card p-4 rounded shadow-sm border h-100">
-                                <i class="bi bi-geo-alt-fill contacto-icon mb-3"></i>
-                                <h5>Dirección</h5>
-                                <p>Santa Tecla, El Salvador</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+          <div class="row justify-content-center g-4">
+            <!-- Formulario Reservaciones -->
+            <div class="col-md-6">
+              <form
+                id="reservaForm"
+                class="reservaciones-form p-4 bg-white rounded shadow-sm border mx-auto"
+              >
+                <h3 class="mb-3">Reservar Mesa</h3>
+                <input
+                  type="text"
+                  id="nombreReserva"
+                  name="nombre"
+                  placeholder="Nombre completo"
+                  class="form-control mb-3"
+                  required
+                />
+                <input
+                  type="date"
+                  id="fechaReserva"
+                  name="fecha"
+                  class="form-control mb-3"
+                  required
+                />
+                <input
+                  type="time"
+                  id="horaReserva"
+                  name="hora"
+                  class="form-control mb-3"
+                  required
+                />
+                <input
+                  type="number"
+                  id="personasReserva"
+                  name="personas"
+                  placeholder="Número de personas"
+                  min="1"
+                  class="form-control mb-3"
+                  required
+                />
+                <button type="submit" class="btn btn-vino w-100">
+                  Reservar
+                </button>
+              </form>
             </div>
-        </section>
+
+            <!-- Formulario Contacto -->
+            <div class="col-md-6">
+              <form
+                id="contactForm"
+                class="contacto-form p-4 bg-white rounded shadow-sm border mx-auto"
+              >
+                <h3 class="mb-3">Contacto</h3>
+                <input
+                  type="text"
+                  id="nombreContacto"
+                  name="nombre"
+                  placeholder="Nombre completo"
+                  class="form-control mb-3"
+                  required
+                />
+                <input
+                  type="email"
+                  id="emailContacto"
+                  name="correo"
+                  placeholder="Correo electrónico"
+                  class="form-control mb-3"
+                  required
+                />
+                <textarea
+                  name="mensaje"
+                  id="mensajeContacto"
+                  placeholder="Escribe tu mensaje..."
+                  rows="5"
+                  class="form-control mb-3"
+                  required
+                ></textarea>
+                <button type="submit" class="btn btn-vino w-100">Enviar</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Mapa -->
+          <div class="contacto-mapa mt-5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.732866506767!2d-89.28140622413574!3d13.67400079908853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f632e511f372dd3%3A0x3fe0c1447718b059!2sITCA%20-%20FEPADE!5e0!3m2!1ses-419!2ssv!4v1757911606201!5m2!1ses-419!2ssv"
+              width="100%"
+              height="400"
+              style="border: 0; border-radius: 10px"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+
+          <!-- Información de contacto -->
+          <div class="contacto-info text-center mt-5">
+            <h3 class="mb-4">Contáctanos</h3>
+            <div class="row justify-content-center g-4">
+              <div class="col-md-4">
+                <div class="info-card p-4 rounded shadow-sm border h-100">
+                  <i class="bi bi-telephone-fill contacto-icon mb-3"></i>
+                  <h5>Teléfono</h5>
+                  <p><a href="tel:+50312345678">+503 1234 5678</a></p>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="info-card p-4 rounded shadow-sm border h-100">
+                  <i class="bi bi-envelope-fill contacto-icon mb-3"></i>
+                  <h5>Correo</h5>
+                  <p>
+                    <a href="mailto:info@restaurante.com"
+                      >info@restaurante.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="info-card p-4 rounded shadow-sm border h-100">
+                  <i class="bi bi-geo-alt-fill contacto-icon mb-3"></i>
+                  <h5>Dirección</h5>
+                  <p>Santa Tecla, El Salvador</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Toast container -->
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-        <div id="messageContent" class="toast align-items-center text-white bg-danger border-0" role="alert"
-            aria-live="assertive" aria-atomic="true">
-            <div class="d-flex">
-                <div class="toast-body" id="messageBody"></div>
-                <button type="button" class="btn-close btn-close me-2 m-auto" data-bs-dismiss="toast"
-                    aria-label="Cerrar"></button>
-            </div>
+      <div
+        id="messageContent"
+        class="toast align-items-center text-white bg-danger border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body" id="messageBody"></div>
+          <button
+            type="button"
+            class="btn-close btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Cerrar"
+          ></button>
         </div>
+      </div>
     </div>
 
     <div id="footer"></div>
 
+    <div id="toast-logout"></div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../src/js/contacto.js"></script>
     <script src="../src/js/main.js"></script>
-</body>
-
+  </body>
 </html>

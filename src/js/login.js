@@ -47,7 +47,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       //   Limpiamos los campos
       logEmailIn.value = "";
       logPasswordIn.value = "";
-    }, 3000);
+    }, 2000);
   } else {
     toastEl.className =
       "toast align-items-center text-white bg-danger border-0";

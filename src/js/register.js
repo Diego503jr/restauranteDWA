@@ -86,5 +86,5 @@ document
       emailIn.value = "";
       passwordIn.value = "";
       confirmPasswordIn.value = "";
-    }, 3000);
+    }, 2000);
   });
