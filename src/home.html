@@ -3,20 +3,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alta Nota - Inicio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css" />
     <!-- <script src="./js/privateRoutes.js"></script> va comentado porque no te deja acceder una vez haces un cierre de sesion -->
   </head>
@@ -24,349 +15,186 @@
     <div id="header"></div>
 
     <main>
-      <section
-        id="home"
-        class="py-5 text-center d-flex align-items-center justify-content-center"
-      >
+      <section id="home" class="py-5 text-center d-flex align-items-center justify-content-center">
         <div class="container">
-          <h1
-            class="display-3 brand-title animate__animated animate__fadeInDown"
-          >
+          <h1 class="display-3 brand-title animate__animated animate__fadeInDown">
             Alta Nota
           </h1>
-          <p
-            class="lead text-white-50 mt-3 animate__animated animate__fadeInUp"
-          >
+          <p class="lead text-white-50 mt-3 animate__animated animate__fadeInUp">
             Saborea la elegancia en cada bocado.
           </p>
         </div>
       </section>
-
-      <section id="carrusel" class="py-5 bg-light-smoke">
-        <div class="container">
-          <h2 class="text-center mb-5 section-title">Nuestros Platillos</h2>
-          <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#foodCarousel"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#foodCarousel"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#foodCarousel"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="img/fileteCarr.jpg"
-                  class="d-block w-100"
-                  alt="Plato gourmet"
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 class="text-white">
-                    Filete Mignon con Reducción de Vino
-                  </h5>
-                  <p class="text-white">
-                    Un clásico con un toque especial de la casa.
-                  </p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="img/sushiCarr.jpg"
-                  class="d-block w-100"
-                  alt="Sushi creativo"
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 class="text-white">Rolls de Salmón y Aguacate</h5>
-                  <p class="text-white">Frescura y sabor en cada pieza.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="img/volcanCarr.jpg"
-                  class="d-block w-100"
-                  alt="Postre de chocolate"
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 class="text-white">Volcán de Chocolate con Helado</h5>
-                  <p class="text-white">
-                    El final perfecto para una velada inolvidable.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#foodCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#foodCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="py-5">
-        <div class="container">
-          <h2 class="text-center mb-4 section-title">Sobre Nosotros</h2>
-          <div class="row align-items-center">
-            <div class="col-md-6 mb-4 mb-md-0 text-center">
-              <img
-                src="img/restoCarr.jpg"
-                alt="Interior del restaurante"
-                class="img-fluid rounded-3 shadow"
-              />
-            </div>
-            <div class="col-md-6">
-              <p class="lead">
-                Nuestra historia se forjó con una pasión inquebrantable por la
-                alta cocina.
-              </p>
-              <p>
-                En Alta Nota, creemos que la comida es más que un simple acto;
-                es una experiencia. Desde 1995, hemos dedicado cada plato a la
-                tradición, la innovación y la búsqueda de los ingredientes más
-                frescos. Nuestra misión es transportarte a través de los
-                sabores, creando momentos memorables en cada visita.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="py-5 bg-light-smoke">
-        <div class="container">
-          <h2 class="text-center mb-5 section-title">
-            Nuestros Servicios Destacados
-          </h2>
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div
-                class="card service-card h-100 shadow-sm border-0 text-center"
-              >
-                <div class="card-body">
-                  <i class="bi bi-truck service-icon"></i>
-                  <h5 class="card-title mt-3">Comida Rápida & Delivery</h5>
-                  <p class="card-text">
-                    Disfruta de nuestros platillos en la comodidad de tu hogar.
-                    ¡Rápido y delicioso!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div
-                class="card service-card h-100 shadow-sm border-0 text-center"
-              >
-                <div class="card-body">
-                  <i class="bi bi-calendar-check service-icon"></i>
-                  <h5 class="card-title mt-3">Reservaciones</h5>
-                  <p class="card-text">
-                    Asegura tu lugar para una velada especial con nuestro
-                    sistema de reservas en línea.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div
-                class="card service-card h-100 shadow-sm border-0 text-center"
-              >
-                <div class="card-body">
-                  <i class="bi bi-star service-icon"></i>
-                  <h5 class="card-title mt-3">Eventos Privados</h5>
-                  <p class="card-text">
-                    Organiza tu evento con nosotros y déjanos crear un banquete
-                    inolvidable para ti y tus invitados.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
+    
+    <!-- CCarrusel Comida -->
+    <section id="carrusel" class="py-5 bg-light-smoke">
+      <div class="container">
+        <h2 class="text-center mb-5 section-title">Nuestros Platillos</h2>
+        <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#foodCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#foodCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#foodCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="img/fileteCarr.jpg"
+                class="d-block w-100"
+                alt="Plato gourmet"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="text-white">
+                  Filete Mignon con Reducción de Vino
+                </h5>
+                <p class="text-white">
+                  Un clásico con un toque especial de la casa.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/sushiCarr.jpg"
+                class="d-block w-100"
+                alt="Sushi creativo"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="text-white">Rolls de Salmón y Aguacate</h5>
+                <p class="text-white">Frescura y sabor en cada pieza.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/volcanCarr.jpg"
+                class="d-block w-100"
+                alt="Postre de chocolate"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="text-white">Volcán de Chocolate con Helado</h5>
+                <p class="text-white">
+                  El final perfecto para una velada inolvidable.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#foodCarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#foodCarousel"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
 
-    <!--Testimoniales-->
-    <section style="color: #000; background-color: #f3f2f2">
-      <div class="container py-5">
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-10 col-xl-8 text-center">
-            <h3 class="fw-bold mb-4">Testimoniales</h3>
-            <p class="mb-4 pb-2 mb-md-5 pb-md-0">
-              En Nota Alta, cada detalle está pensado para crear experiencias
-              inolvidables. Nuestros clientes son el reflejo de nuestra pasión
-              por la excelencia gastronómica y el servicio impecable. Estas son
-              algunas de sus palabras...
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title">Sobre Nosotros</h2>
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0 text-center">
+            <img
+              src="img/restoCarr.jpg"
+              alt="Interior del restaurante"
+              class="img-fluid rounded-3 shadow"
+            />
+          </div>
+          <div class="col-md-6">
+            <p class="lead">
+              Nuestra historia se forjó con una pasión inquebrantable por la
+              alta cocina.
+            </p>
+            <p>
+              En Alta Nota, creemos que la comida es más que un simple acto;
+              es una experiencia. Desde 1995, hemos dedicado cada plato a la
+              tradición, la innovación y la búsqueda de los ingredientes más
+              frescos. Nuestra misión es transportarte a través de los
+              sabores, creando momentos memorables en cada visita.
             </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="row text-center">
-          <div class="col-md-4 mb-4 mb-md-0">
-            <div class="card h-100">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img
-                    src="../src/img/Tm-1.jpg"
-                    class="rounded-circle shadow-1-strong"
-                    width="100"
-                    height="100"
-                  />
-                </div>
-                <h5 class="font-weight-bold">Teresa Gutierrez</h5>
-                <h6 class="font-weight-bold my-3">Empresaria</h6>
-
-                <p class="mb-2">
-                  <i class="fas fa-quote-left pe-2"></i>"En Nota Alta cada
-                  visita es una experiencia única. La atención es impecable y
-                  los cortes de carne simplemente perfectos. Definitivamente el
-                  mejor restaurante de la ciudad."
+    <section id="services" class="py-5 bg-light-smoke">
+      <div class="container">
+        <h2 class="text-center mb-5 section-title">
+          Nuestros Servicios Destacados
+        </h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div
+              class="card service-card h-100 shadow-sm border-0 text-center"
+            >
+              <div class="card-body">
+                <i class="bi bi-truck service-icon"></i>
+                <h5 class="card-title mt-3">Comida Rápida & Delivery</h5>
+                <p class="card-text">
+                  Disfruta de nuestros platillos en la comodidad de tu hogar.
+                  ¡Rápido y delicioso!
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4 mb-md-0">
-            <div class="card h-100">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img
-                    src="../src/img/Tm-2.jpg"
-                    class="rounded-circle shadow-1-strong"
-                    width="100"
-                    height="100"
-                  />
-                </div>
-                <h5 class="font-weight-bold">Maggie López</h5>
-                <h6 class="font-weight-bold my-3">Fotógrafa</h6>
-
-                <p class="mb-2">
-                  <i class="fas fa-quote-left pe-2"></i>"Me sorprendió la
-                  armonía de sabores en cada platillo. El ambiente es elegante
-                  pero cálido, ideal para disfrutar en pareja o con amigos."
+          <div class="col-md-4">
+            <div
+              class="card service-card h-100 shadow-sm border-0 text-center"
+            >
+              <div class="card-body">
+                <i class="bi bi-calendar-check service-icon"></i>
+                <h5 class="card-title mt-3">Reservaciones</h5>
+                <p class="card-text">
+                  Asegura tu lugar para una velada especial con nuestro
+                  sistema de reservas en línea.
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-0">
-            <div class="card h-100">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img
-                    src="../src/img/TM.3.jpg"
-                    class="rounded-circle shadow-1-strong"
-                    width="100"
-                    height="100"
-                  />
-                </div>
-                <h5 class="font-weight-bold">Alejandro Ramírez</h5>
-                <h6 class="font-weight-bold my-3">Abogado</h6>
-
-                <p class="mb-2">
-                  <i class="fas fa-quote-left pe-2"></i>"La combinación de
-                  mariscos y carnes en el menú es espectacular. Cada detalle
-                  está cuidado al máximo, desde la presentación hasta el
-                  servicio."
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-0 mt-3">
-            <div class="card h-100">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img
-                    src="../src/img/TM-4.jpg"
-                    class="rounded-circle shadow-1-strong"
-                    width="100"
-                    height="100"
-                  />
-                </div>
-                <h5 class="font-weight-bold">Claudia Mendez</h5>
-                <h6 class="font-weight-bold my-3">Arquitecta</h6>
-
-                <p class="mb-2">
-                  <i class="fas fa-quote-left pe-2"></i>"El Filete Mignon fue el
-                  mejor que he probado en mi vida. La calidad de los
-                  ingredientes y la preparación superan cualquier expectativa."
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-0 mt-3">
-            <div class="card h-100">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img
-                    src="../src/img/TM-5.jpg"
-                    class="rounded-circle shadow-1-strong"
-                    width="100"
-                    height="100"
-                  />
-                </div>
-                <h5 class="font-weight-bold">Daniel Herrera</h5>
-                <h6 class="font-weight-bold my-3">Ejecutivo de Negocios</h6>
-
-                <p class="mb-2">
-                  <i class="fas fa-quote-left pe-2"></i>"Nota Alta es el lugar
-                  perfecto para cenas de trabajo. Elegancia, discreción y
-                  gastronomía de primer nivel."
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-0 mt-3">
-            <div class="card h-100">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img
-                    src="../src/img/TM-6.jpg"
-                    class="rounded-circle shadow-1-strong"
-                    width="100"
-                    height="100"
-                  />
-                </div>
-                <h5 class="font-weight-bold">Isabella Torres</h5>
-                <h6 class="font-weight-bold my-3">Chef Aficionada</h6>
-
-                <p class="mb-2">
-                  <i class="fas fa-quote-left pe-2"></i>"La Pasta Alfredo y el
-                  Salmón a la Parrilla me dejaron sin palabras. Se nota la
-                  pasión por la cocina en cada bocado."
+          <div class="col-md-4">
+            <div
+              class="card service-card h-100 shadow-sm border-0 text-center"
+            >
+              <div class="card-body">
+                <i class="bi bi-star service-icon"></i>
+                <h5 class="card-title mt-3">Eventos Privados</h5>
+                <p class="card-text">
+                  Organiza tu evento con nosotros y déjanos crear un banquete
+                  inolvidable para ti y tus invitados.
                 </p>
               </div>
             </div>
@@ -374,6 +202,137 @@
         </div>
       </div>
     </section>
+    <!--Testimonios-->
+    <section class="container my-5">
+    <h2 class="text-center mb-4 section-title">Testimoniales</h2>
+    <div id="carruselTestimonios" class="carousel data-bs-slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Teresa Gutierrez</h5>
+                                <h6 class="text-muted">Empresaria</h6>
+                                <p>"Cada visita es única. La atención es impecable y los cortes de carne son perfectos."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Maggie López</h5>
+                                <h6 class="text-muted">Fotógrafa</h6>
+                                <p>"Me sorprendió la armonía de sabores. Ambiente elegante pero cálido."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Alejandro Ramírez</h5>
+                                <h6 class="text-muted">Abogado</h6>
+                                <p>"La combinación de mariscos y carnes es espectacular. Todo cuidado al máximo."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Claudia Mendez</h5>
+                                <h6 class="text-muted">Arquitecta</h6>
+                                <p>"El Filete Mignon fue el mejor que he probado. Ingredientes de primera calidad."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Daniel Herrera</h5>
+                                <h6 class="text-muted">Ejecutivo de Negocios</h6>
+                                <p>"El lugar perfecto para cenas de trabajo. Elegancia y gastronomía de primer nivel."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Isabella Torres</h5>
+                                <h6 class="text-muted">Chef Aficionada</h6>
+                                <p>"La Pasta Alfredo y el Salmón a la Parrilla me dejaron sin palabras. Pasión en cada bocado."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carruselTestimonios"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carruselTestimonios"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+      <!-- Agregar testimonio -->
+      <div class="text-center mt-4">
+        <button class="btn btn-vino w-15" data-bs-toggle="modal" data-bs-target="#modalTestimonios">
+          Comparte tu experiencia
+        </button>
+      </div>
+  </section>
+
+    <!-- Modal para agregar testimonio -->
+<div class="modal fade" id="modalTestimonios" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agrega tu testimonio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formTestimonio">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="profesion" class="form-label">Profesión / Ocupación</label>
+            <input type="text" id="profesion" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Comentario</label>
+            <textarea id="mensaje" class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div id="footer"></div>
 
