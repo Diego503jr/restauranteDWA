@@ -79,14 +79,25 @@ function showInvoice() {
     cart.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
-                    <td>${item.name}</td>
-                    <td>$${item.price}</td>
-                `;
+            <td>${item.name}</td>
+            <td>$${item.price}</td>
+        `;
         invoiceItems.appendChild(row);
         total += parseFloat(item.price);
     });
 
     invoiceTotal.textContent = `$${total.toFixed(2)}`;
+
+    // Guardar la orden pagada en localStorage inmediatamente
+    if (cart.length > 0) {
+        const orders = JSON.parse(localStorage.getItem('orders')) || [];
+        orders.push({
+            items: [...cart],
+            estado: 'Pendiente',
+            fecha: new Date().toLocaleString()
+        });
+        localStorage.setItem('orders', JSON.stringify(orders));
+    }
 
     setTimeout(() => {
         cart = [];
@@ -94,6 +105,7 @@ function showInvoice() {
         updateCartCount();
     }, 3000);
 }
+
 
 // Evento para agregar al carrito
 document.querySelectorAll('.add-to-cart').forEach(button => {

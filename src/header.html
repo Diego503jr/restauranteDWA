@@ -17,9 +17,24 @@
         <li class="nav-item">
           <a class="nav-link" href="home.html">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="menu.html">Menú</a>
+
+        <!-- Menú con Dropdown -->
+        <li class="nav-item dropdown">
+          <a 
+            class="nav-link dropdown-toggle" 
+            href="#" 
+            id="navbarDropdown" 
+            role="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false">
+            Menú
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="menu.html">Ver Menú</a></li>
+            <li><a class="dropdown-item" href="ordenes.html">Órdenes</a></li>
+          </ul>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="galeria.html">Galería</a>
         </li>
@@ -28,7 +43,7 @@
         </li>
         <li class="nav-item">
           <button id="btn-logout" class="nav-link btn btn-vino">
-            Cerrar Sesion
+            Cerrar Sesión
           </button>
         </li>
       </ul>
