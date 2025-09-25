@@ -121,23 +121,25 @@ h6,
 
 /* Footer */
 footer {
-    background-color: var(--color-petroleo);
-    color: var(--color-blanco-humo);
+  background-color: var(--color-petroleo);
+  color: var(--color-blanco-humo);
 }
 
-.social-links a {
-    font-size: 1.5rem;
-    color: var(--color-blanco-humo);
-    transition: color 0.3s ease;
+.social-icon {
+  font-size: 1.4rem;
+  color: var(--color-blanco-humo);
+  transition: color 0.3s ease-in-out;
 }
 
-.social-links a:hover {
-    color: var(--color-cobre);
+.social-icon:hover {
+  color: var(--color-cobre);
 }
 
-/* bckg */
-.bg-light-smoke {
-    background-color: var(--color-blanco-humo);
+/* Opcional: en móvil un poquito más grandes */
+@media (max-width: 768px) {
+  .social-icon {
+    font-size: 1.6rem;
+  }
 }
 
 
