@@ -9,7 +9,7 @@
 
 
 .contacto-form textarea {
-    height: 120px;          
+    height: 100px;          
     resize: none;          
 }
 
@@ -69,3 +69,70 @@ footer a:hover {
     font-size: 2.5rem;
     color: var(--color-vino);
 }
+
+.reserva-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Estilo personalizado para el modal de reservas */
+#verReservasModal .modal-content {
+    background-color: var(--color-blanco-humo);
+    border-radius: 15px;
+    border: 1px solid rgba(27, 58, 75, 0.1);
+    box-shadow: 0 10px 25px rgba(27, 58, 75, 0.2);
+    font-family: 'Lato', sans-serif;
+}
+
+#verReservasModal .modal-header {
+    background-color: var(--color-vino);
+    color: var(--color-blanco-humo);
+    border-bottom: 1px solid rgba(27, 58, 75, 0.1);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#verReservasModal .modal-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#verReservasModal .modal-body {
+    padding: 2rem;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+#verReservasModal .list-group-item {
+    border-radius: 10px;
+    border: 1px solid rgba(27, 58, 75, 0.1);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#verReservasModal .list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(27, 58, 75, 0.15);
+}
+
+#verReservasModal .modal-footer {
+    border-top: 1px solid rgba(27, 58, 75, 0.1);
+    justify-content: flex-start;
+}
+
+#verReservasModal .btnLimpiar {
+    background-color: var(--color-cobre);
+    color: var(--color-blanco-humo);
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#verReservasModal .btnLimpiar:hover {
+    background-color: var(--color-vino);
+    border-color: var(--color-vino);
+}
+
