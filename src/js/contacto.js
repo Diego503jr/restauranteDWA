@@ -15,12 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let contador = Number(localStorage.getItem('contador')) || 0;
 
     //PICKERS (FECHA Y HORA)
-    const fechaFiltro = flatpickr("#fechaFiltro", {
-        dateFormat: "d-m-y",
-        minDate: "today",
-        wrap: false
-    });
-
     const fechaPicker = flatpickr("#fechaReserva", {
         dateFormat: "d-m-y",
         minDate: "today",
@@ -34,7 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
         altInput: true,
         altFormat: "H:i",
         time_24hr: true,
-        minuteIncrement: 5
+        minuteIncrement: 5,
+        minTime: "11:00",
+        maxTime: "22:00"
     });
 
     //Variable reserva
@@ -210,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
         numberContent.textContent = 0;
         numberContent.style.display = 'none';
     });
-    
+
 });
 
 
@@ -245,3 +241,113 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         mensajeContacto.value = "";
     }, 3000);
 });
+
+//Cómo llegar - API navigator.geolocation
+document.addEventListener("DOMContentLoaded", () => {
+    const btnRuta = document.getElementById("btnRuta");
+
+    if (btnRuta) {
+        btnRuta.addEventListener("click", () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+
+                        //Prueba Ubicación actual: Metrocentro SS
+                        // const lat = 13.7063597;
+                        // const lng = -89.2130952;
+
+                        // Destino Multiplaza 
+                        const destinoLat = 13.6789008;
+                        const destinoLon = -89.2496607;
+
+                        // Abrir Google Maps con la ruta
+                        const url = `https://www.google.com/maps/dir/${lat},${lng}/${destinoLat},${destinoLon}`;
+                        window.open(url, "_blank");
+                    },
+                    (error) => {
+                        alert("No se pudo obtener tu ubicación: " + error.message);
+                    }
+                );
+            } else {
+                alert("Tu navegador no soporta geolocalización.");
+            }
+        });
+    }
+});
+
+//CHATBOT
+document.addEventListener("DOMContentLoaded", () => {
+    const chatbotBtn = document.getElementById("chatbotBtn");
+    const chatbotWindow = document.getElementById("chatbotWindow");
+    const closeChatbot = document.getElementById("closeChatbot");
+    const chatbotMessages = document.getElementById("chatbotMessages");
+    const chatbotInput = document.getElementById("chatbotInput");
+    const sendMessage = document.getElementById("sendMessage");
+
+    const respuestas = {
+        "hola": "¡Hola! Soy DeliBot. ¿Cómo puedo ayudarte?.",
+        "horario": "Nuestro horario es de lunes a domingo, de 11:00 AM a 10:00 PM.",
+        "dirección": "Estamos en el segundo nivel de Las Terrazas, Multiplaza. Antiguo Cuscatlán , El Salvador.",
+        "direccion": "Estamos en el segundo nivel de Las Terrazas, Multiplaza. Antiguo Cuscatlán , El Salvador.",
+        "ubicación": "Estamos en el segundo nivel de Las Terrazas, Multiplaza. Antiguo Cuscatlán , El Salvador.",
+        "ubicacion": "Estamos en el segundo nivel de Las Terrazas, Multiplaza. Antiguo Cuscatlán , El Salvador.",
+        "promoción": "Tenemos 2x1 en bebidas todos los viernes de 6:00 a 8:00 PM.",
+        "promocion": "Tenemos 2x1 en bebidas todos los viernes de 6:00 a 8:00 PM.",
+        "reserva": "Puedes hacer una reservación en el formulario de resrva o llamando al +503 1234 5678.",
+        "gracias": "¡Con gusto! Ten un excelente día"
+    };
+
+    // Mostrar / ocultar ventana del chatbot
+    chatbotBtn.addEventListener("click", () => {
+        chatbotWindow.classList.toggle("d-none");
+    });
+
+    closeChatbot.addEventListener("click", () => {
+        chatbotWindow.classList.add("d-none");
+    });
+
+    // Enviar mensaje
+    function enviarMensaje() {
+        const texto = chatbotInput.value.trim();
+        if (texto === "") return;
+
+        // Mostrar mensaje del usuario
+        chatbotMessages.innerHTML += `
+      <div class="text-end mb-2">
+        <span class="badge bg-primary">${texto}</span>
+      </div>`;
+
+        chatbotInput.value = "";
+
+        // Respuesta del bot
+        const lowerText = texto.toLowerCase();
+        let respuesta = "Lo siento, no entendí tu pregunta. Intenta con: horario, dirección, promoción, reservar.";
+
+        for (let clave in respuestas) {
+            if (lowerText.includes(clave)) {
+                respuesta = respuestas[clave];
+                break;
+            }
+        }
+
+        setTimeout(() => {
+            chatbotMessages.innerHTML += `
+        <div class="text-start mb-2">
+          <span class="badge bg-secondary">${respuesta}</span>
+        </div>`;
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }, 500);
+    }
+
+    sendMessage.addEventListener("click", enviarMensaje);
+    chatbotInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") enviarMensaje();
+    });
+});
+
+
+
+
+

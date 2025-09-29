@@ -136,3 +136,24 @@ footer a:hover {
     border-color: var(--color-vino);
 }
 
+/*CHATBOT*/
+#chatbotWindow {
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#chatbotMessages {
+  background: #f8f9fa;
+}
+
+
