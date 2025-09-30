@@ -152,7 +152,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 noti.fechaReserva.getFullYear(),
                 noti.fechaReserva.getMonth(),
                 noti.fechaReserva.getDate(),
-                23, 59, 59
+                noti.horaReserva.getHours(),
+                noti.horaReserva.getMinutes()
             );
 
             //const fechaPrueba = new Date(2025, 8, 28, 23, 59, 59); 
@@ -417,7 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "ubicacion": "Estamos en el segundo nivel de Las Terrazas, Multiplaza. Antiguo Cuscatlán , El Salvador.",
         "promoción": "Tenemos 2x1 en bebidas todos los viernes de 6:00 a 8:00 PM.",
         "promocion": "Tenemos 2x1 en bebidas todos los viernes de 6:00 a 8:00 PM.",
-        "reserva": "Puedes hacer una reservación en el formulario de resrva o llamando al +503 2252-3474.",
+        "reserva": "Puedes hacer una reservación en el formulario de reserva o llamando al +503 2252-3474.",
         "gracias": "¡Con gusto! Ten un excelente día"
     };
 
