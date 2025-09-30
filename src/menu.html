@@ -1,174 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestros Menús - Alta Nota</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/privateRoutes.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuestros Menús - Alta Nota</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <div id="header"></div>
 
-<body>
-  <div id="header"></div>
+    <div class="container">
+      <h1 class="menu-title">NUESTRO MENÚ</h1>
 
-  <div class="container">
-    <h1 class="menu-title">NUESTRO MENÚ</h1>
-
-    <div class="category-nav">
-      <div class="d-flex justify-content-between align-items-center">
-        <!-- Contenedor para las pestañas (centradas) -->
-        <div class="flex-grow-1 d-flex justify-content-center">
-          <ul class="nav nav-pills" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-entradas-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-entradas" type="button" role="tab">
-                Entradas
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-platos-tab" data-bs-toggle="pill" data-bs-target="#pills-platos"
-                type="button" role="tab">
-                Platos Fuertes
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-postres-tab" data-bs-toggle="pill" data-bs-target="#pills-postres"
-                type="button" role="tab">
-                Postres
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-bebidas-tab" data-bs-toggle="pill" data-bs-target="#pills-bebidas"
-                type="button" role="tab">
-                Bebidas
-              </button>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Botón del carrito-->
-        <div class="ps-3">
-          <button class="btn btn-cart position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
-            Carrito
-            <span id="cartCount" class="position-absolute badge rounded-pill bg-danger" style="display: none">0</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Content -->
-    <div class="tab-content" id="pills-tabContent">
-      <!-- ENTRADAS -->
-      <div class="tab-pane fade show active" id="pills-entradas" role="tabpanel">
-        <h2 class="section-title">Entradas</h2>
-        <div class="row" id="entradas-container">
-          <!-- Los elementos de entradas se cargarán aquí -->
-        </div>
-      </div>
-
-      <!-- PLATOS FUERTES -->
-      <div class="tab-pane fade" id="pills-platos" role="tabpanel">
-        <h2 class="section-title">Platos Fuertes</h2>
-        <div class="row" id="platos-container">
-          <!-- Los elementos de platos fuertes se cargarán aquí -->
-        </div>
-      </div>
-
-      <!-- POSTRES -->
-      <div class="tab-pane fade" id="pills-postres" role="tabpanel">
-        <h2 class="section-title">Postres</h2>
-        <div class="row" id="postres-container">
-          <!-- Los elementos de postres se cargarán aquí -->
-        </div>
-      </div>
-
-      <!-- BEBIDAS -->
-      <div class="tab-pane fade" id="pills-bebidas" role="tabpanel">
-        <h2 class="section-title">Bebidas</h2>
-        <div class="row" id="bebidas-container">
-          <!-- Los elementos de bebidas se cargarán aquí -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal del Carrito -->
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="category-nav">
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Contenedor para las pestañas (centradas) -->
+          <div class="flex-grow-1 d-flex justify-content-center">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-entradas-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-entradas"
+                  type="button"
+                  role="tab"
+                >
+                  Entradas
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-platos-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-platos"
+                  type="button"
+                  role="tab"
+                >
+                  Platos Fuertes
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-postres-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-postres"
+                  type="button"
+                  role="tab"
+                >
+                  Postres
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-bebidas-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-bebidas"
+                  type="button"
+                  role="tab"
+                >
+                  Bebidas
+                </button>
+              </li>
+            </ul>
           </div>
-          <div class="modal-body">
-            <div id="cartMessage" style="display: none" class="alert alert-success">
-              ✅ Pago realizado con éxito
-            </div>
-            <div id="cartItems" class="list-group"></div>
-            <div id="cartInvoice" style="display: none">
-              <h5>Factura</h5>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                  </tr>
-                </thead>
-                <tbody id="invoiceItems"></tbody>
-                <tfoot>
-                  <tr>
-                    <th>Total</th>
-                    <th id="invoiceTotal">$0.00</th>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-            <div class="d-flex justify-content-between mt-3" id="cartTotalContainer">
-              <h5>Total:</h5>
-              <h5 id="cartTotal">$0.00</h5>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" id="clearCart">
-              Vaciar Carrito
-            </button>
-            <button type="button" class="btn btn-primary" id="proceedPayment">
-              Proceder al Pago
-            </button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-              Cerrar
+
+          <!-- Botón del carrito-->
+          <div class="ps-3">
+            <button
+              class="btn btn-cart position-relative"
+              data-bs-toggle="modal"
+              data-bs-target="#cartModal"
+            >
+              Carrito
+              <span
+                id="cartCount"
+                class="position-absolute badge rounded-pill bg-danger"
+                style="display: none"
+                >0</span
+              >
             </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Toast Container-->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-          <strong class="me-auto">Notificación</strong>
-          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <!-- Menu Content -->
+      <div class="tab-content" id="pills-tabContent">
+        <!-- ENTRADAS -->
+        <div
+          class="tab-pane fade show active"
+          id="pills-entradas"
+          role="tabpanel"
+        >
+          <h2 class="section-title">Entradas</h2>
+          <div class="row" id="entradas-container">
+            <!-- Los elementos de entradas se cargarán aquí -->
+          </div>
         </div>
-        <div class="toast-body" id="toastBody"></div>
+
+        <!-- PLATOS FUERTES -->
+        <div class="tab-pane fade" id="pills-platos" role="tabpanel">
+          <h2 class="section-title">Platos Fuertes</h2>
+          <div class="row" id="platos-container">
+            <!-- Los elementos de platos fuertes se cargarán aquí -->
+          </div>
+        </div>
+
+        <!-- POSTRES -->
+        <div class="tab-pane fade" id="pills-postres" role="tabpanel">
+          <h2 class="section-title">Postres</h2>
+          <div class="row" id="postres-container">
+            <!-- Los elementos de postres se cargarán aquí -->
+          </div>
+        </div>
+
+        <!-- BEBIDAS -->
+        <div class="tab-pane fade" id="pills-bebidas" role="tabpanel">
+          <h2 class="section-title">Bebidas</h2>
+          <div class="row" id="bebidas-container">
+            <!-- Los elementos de bebidas se cargarán aquí -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal del Carrito -->
+      <div
+        class="modal fade"
+        id="cartModal"
+        tabindex="-1"
+        aria-labelledby="cartModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div
+                id="cartMessage"
+                style="display: none"
+                class="alert alert-success"
+              >
+                ✅ Pago realizado con éxito
+              </div>
+              <div id="cartItems" class="list-group"></div>
+              <div id="cartInvoice" style="display: none">
+                <h5>Factura</h5>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Producto</th>
+                      <th>Precio</th>
+                    </tr>
+                  </thead>
+                  <tbody id="invoiceItems"></tbody>
+                  <tfoot>
+                    <tr>
+                      <th>Total</th>
+                      <th id="invoiceTotal">$0.00</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <div
+                class="d-flex justify-content-between mt-3"
+                id="cartTotalContainer"
+              >
+                <h5>Total:</h5>
+                <h5 id="cartTotal">$0.00</h5>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="clearCart">
+                Vaciar Carrito
+              </button>
+              <button type="button" class="btn btn-primary" id="proceedPayment">
+                Proceder al Pago
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toast Container-->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <strong class="me-auto">Notificación</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body" id="toastBody"></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="footer"></div>
+    <div id="footer"></div>
 
-  <div id="toast-logout"></div>
+    <div id="toast-logout"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-  <script>
-
-  </script>
-  <script src="../src/js/main.js"></script>
-  <script src="../src/js/menu.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script></script>
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/menu.js"></script>
+  </body>
 </html>
