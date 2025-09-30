@@ -1,16 +1,16 @@
 .reservaciones-form,
 .contacto-form {
-    max-width: 500px;       
-    min-height: 380px;     
+    max-width: 500px;
+    min-height: 380px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 
 .contacto-form textarea {
-    height: 100px;          
-    resize: none;          
+    height: 100px;
+    resize: none;
 }
 
 
@@ -29,6 +29,7 @@ footer a {
 footer a:hover {
     color: var(--color-cobre);
 }
+
 .contacto-info h3 {
     font-family: 'Cinzel', serif;
     color: var(--color-petroleo);
@@ -42,7 +43,7 @@ footer a:hover {
 
 .info-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .info-card h5 {
@@ -70,7 +71,7 @@ footer a:hover {
     color: var(--color-vino);
 }
 
-.reserva-content{
+.reserva-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -136,24 +137,90 @@ footer a:hover {
     border-color: var(--color-vino);
 }
 
+/*Estilos personalizados para modal de contacto*/
+#verMensajesModal .modal-content {
+    background-color: var(--color-blanco-humo);
+    border-radius: 15px;
+    border: 1px solid rgba(27, 58, 75, 0.1);
+    box-shadow: 0 10px 25px rgba(27, 58, 75, 0.2);
+    font-family: 'Lato', sans-serif;
+}
+
+#verMensajesModal .modal-header {
+    background-color: var(--color-vino);
+    color: var(--color-blanco-humo);
+    border-bottom: 1px solid rgba(27, 58, 75, 0.1);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#verMensajesModal .modal-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#verMensajesModal .modal-body {
+    padding: 2rem;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+#verMensajesModal .list-group-item {
+    border-radius: 10px;
+    border: 1px solid rgba(27, 58, 75, 0.1);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#verMensajesModal .list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(27, 58, 75, 0.15);
+}
+
+#verMensajesModal .modal-footer {
+    border-top: 1px solid rgba(27, 58, 75, 0.1);
+    justify-content: flex-start;
+}
+
+
 /*CHATBOT*/
 #chatbotWindow {
-  animation: fadeInUp 0.3s ease;
+    animation: fadeInUp 0.3s ease;
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #chatbotMessages {
-  background: #f8f9fa;
+    background: #f8f9fa;
 }
 
+#chatbotMessages .user-message {
+    display: inline-block;
+    max-width: 80%; 
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    white-space: normal !important; 
+    padding: 5px 10px;
+    border-radius: 15px;
+}
 
+#chatbotMessages .bot-message {
+    display: inline-block;
+    max-width: 80%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal !important;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
